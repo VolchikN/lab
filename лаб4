@@ -1,0 +1,66 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+setlocale(LC_ALL, "Rus");
+float sum, ch, r, pr, a, b, s, p, d, L, pi=3.14 , sr;
+cout<<"Введите  сторону прямоугольника a";
+cin>> a;
+cout<<"введите сторону прямоугольника b";
+cin>> b;
+s = a*b;
+cout<< "площадь прямоугольника ="<< s << endl;
+p= 2*(a+b);
+cout<< "периметр прямоугольника ="<< p << endl;
+
+cout<<"\n 2 задача " << endl;
+cout<<"Введите  диаметр окружности";
+cin>> d;
+L= pi*d;
+cout<<"длина окружности= " << L<< endl;
+
+cout<<"\n 3 задача " << endl;
+cout<<"Введите  a";
+cin>> a;
+cout<<"введите  b";
+cin>> b;
+sr= (a+b)/2;
+cout<<"среднее арифметическое= " << sr<< endl;
+
+cout<<"\n 4 задача " << endl;
+cout<<"Введите ненулевое a";
+cin>> a;
+cout<<"введите ненулевое b";
+cin>> b;
+sum = a*a+b*b;
+cout<<"сумма = " << sum<< endl;
+r= a*a-b*b;
+cout<<"разность = " << r<< endl;
+pr= a*a*b*b;
+cout<<"произведение = " << pr<< endl;
+ch= (a*a)/(b*b);
+cout<<"частное = " << ch<< endl;
+
+cout<<"\n 5 задача " << endl;
+cout<<"Введите ненулевое a";
+cin>> a;
+cout<<"введите ненулевое b";
+cin>> b;
+sum = abs(a)+ abs(b);
+cout<<"сумма = " << sum<< endl;
+r= abs(a)-abs(b);
+cout<<"разность = " << r<< endl;
+pr= abs(a)*abs(b);
+cout<<"произведение = " << pr<< endl;
+ch= abs(a)/abs(b);
+cout<<"частное = " << ch<< endl;
+
+
+
+
+
+
+    return 0;
+}
