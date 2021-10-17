@@ -1,0 +1,102 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+setlocale(LC_ALL, "Rus");
+float x1,x2,y1,y2, ras;
+cout<<"\n Зад.1 "<<endl; 
+cout<<"Введите координату  x1 = "; 
+cin>> x1 ;
+cout<<"Введите координату y1 = "; 
+cin>> y1 ;
+cout<<"Введите координату x2 = "; 
+cin>> x2 ;
+cout<<"Введите координату y2 = "; 
+cin>> y2 ;
+ras= sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2)); 
+cout<<"Расстояние между двумя точками равно: "<< ras <<endl; 
+
+cout<<"\n Зад.2 "<<endl;
+float a,b,c,ac,bc,sum;
+cout<<"Значение координаты A ="; 
+cin>>a;
+cout<<"Значение координаты B ="; 
+cin>>b;
+cout<<"Значение координаты C ="; 
+cin>>c;
+ac= (c-a); 
+bc= (c-b);  
+cout<<"Длина отрезка AC = "<< ac <<endl;
+cout<<"Длина отрезка BC = "<< bc <<endl; 
+sum= ac+bc;
+cout<<"Сумма двух отрезков = "<< sum <<endl; 
+
+cout<<"\n Зад.3 "<<endl;
+float pr;
+float ac,bc, a, b, c;
+cout<<"Значение координаты A = "; 
+cin>>a;
+cout<<"Значение координаты B = "; 
+cin>>b;
+cout<<"Значение координаты C, находящейся между А и В = "; 
+cin>>c;
+if (c>b || c<a)
+{
+cout<<"точка C не находится между A и B"<<endl;
+}
+else 
+{
+ac= (c-a); 
+bc= (b-c); 
+pr= ac*bc; 
+cout<<"Длина отрезка AC = "<< ac <<endl;
+cout<<"Длина отрезка BC= "<< bc <<endl;
+cout<<"Произведение отрезков AC и BC = "<< pr <<endl;
+    } 
+
+cout<<"\n Зад.4 "<<endl;
+float p,s, x1, x2, y1, y2;
+cout<<"Введите координату x1 = "; 
+cin>>x1;
+cout<<"Введите координату y1 = "; 
+cin>>y1;
+cout<<"Введите координату x2 = "; 
+cin>>x2;
+cout<<"Введите координату y2 = "; 
+cin>>y2;
+p= 2*(abs(y2-y1)+abs(x2-x1));
+s=abs(x2-x1)*abs(y2-y1);
+cout<<"Периметр прямоугольника равен P = "<< p <<endl;
+cout<<"Площадь прямоугольника равна S = "<< s <<endl; 
+
+
+cout<<"\n Зад.5 Треугольник"<<endl;
+float S,P,pp,a,b,c, x1, x2,x3, y1, y2,y3;
+cout<<"Введите координату x1 = "; 
+cin>>x1;
+cout<<"Введите координату y1 = "; 
+cin>>y1;
+cout<<"Введите координату x2 = "; 
+cin>>x2;
+cout<<"Введите координату y2 = "; 
+cin>>y2;
+cout<<"Введите координату x3 = "; 
+cin>>x3;
+cout<<"Введите координату y3 = "; 
+cin>>y3;
+a= sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1)); // первая сторона
+b=sqrt((x3-x2)*(x3-x2) + (y3-y2)*(y3-y2));  // вторая сторона
+c= sqrt((x3-x1)*(x3-x1) + (y3-y1)*(y3-y1));  // третья сторона
+pp= (a+b+c)/2; //полупериметр
+P= (a+b+c); //периметр
+S= sqrt(pp*(pp-a)*(pp-b)*(pp-c)); // формула герона
+cout<<"Периметр треугольника равен P = "<< P <<endl;
+cout<< "Площадь треугольника равен S = "<< S <<endl; 
+
+    
+
+    return 0;
+}
