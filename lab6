@@ -1,0 +1,65 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+     cout<<"\n Зад.1 "<<endl; 
+    int A, B, C;
+    C=0;
+    cout<<"Введите А и В ";
+    cin>> A;
+    cin>> B;
+   C=A;
+   A=B;
+   B=C;
+   cout<< "A равно " << A << endl;
+cout<< "B равно " << B << endl; 
+
+cout<<"\n Зад.2 "<<endl; 
+int  D, F;
+D=0;
+F=0;
+    cout<<"Введите А, В, C ";
+    cin>> A;
+    cin>> B;
+    cin>> C;
+   D=A;
+   F=B;
+   A=C;
+   B=D;
+  C=F;
+   cout<< "A равно " << A << endl;
+cout<< "B равно " << B << endl;
+cout<< "C равно " << C << endl; 
+
+cout<<"\n Зад.3 "<<endl; 
+int  S;
+D=0;
+F=0;
+S=0;
+    cout<<"Введите А, В, C ";
+    cin>> A;
+    cin>> B;
+    cin>> C;
+   D=A;
+   F=C;
+   S=B;
+   C=D;
+   B=F;
+   A=S;
+   cout<< "A равно " << A << endl;
+cout<< "B равно " << B << endl;
+cout<< "C равно " << C << endl; 
+
+cout<<"\n Зад.4 "<<endl; 
+int x;
+float y;
+y=0;
+cout<< "введите целое значение х ";
+cin>> x;
+y= 3*pow(x, 6)-6*pow(x, 2) -7;
+cout<< "y равно " << y << endl;
+    return 0;
+}
