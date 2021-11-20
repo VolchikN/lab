@@ -2,6 +2,7 @@
 #include <iostream>
 #include <math.h>
 
+
 using namespace std;
 
 int main()
@@ -48,7 +49,7 @@ int main()
      cout << "Значение начального расстояния s в км = ";
      cin >> s;
      s2 = s + (V1 + V2) * T;
-     cout << "новое расстояние " << s2 << endl; 
+     cout << "новое расстояние = " << s2 << endl; 
     
     cout << "\n Зад.5" << endl;
     float  B;
@@ -57,7 +58,7 @@ int main()
     cout << "Введите коэффициент B = ";
     cin >> B ;
     X = -B / A;
-    cout << "Решение линейного уравнения =" << X << endl;
+    cout << "Решение линейного уравнения =" << X << endl; 
 
     cout << "\n Зад.6 " << endl;
     float A1, A2, B1, B2, C1, C2, x1, y1, D;
@@ -77,9 +78,13 @@ int main()
     if (D != 0) {
         x1 = (C1 * B2 - C2 * B1) / D;
         y1 = (A1 * C2 - A2 * C1) / D;
+        if (x1 ==-0) {
+       x1 = 0; }
+        if (y1==-0) {
+      y1= 0; }
         cout << "Решение системы линейного уравнения x=" << x1 << " y=" << y1 << endl;
 
-    }
+        }
     else {
         cout << "Нет решений " << endl;
     }
