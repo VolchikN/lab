@@ -1,0 +1,80 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    cout << "\n Зад 1" << endl;
+    int A, B;
+    cout << "Введите целые числа А и В: ";
+    cin >> A;
+    cin>>B;
+   if (A>2 && B<=3) {
+    cout << "Всказывание справедливо"<< endl; }
+    else cout <<"Высказывание не справедливо"<< endl; 
+    
+    
+    cout << "\n Зад 2" << endl;
+    int C;
+    cout << "Введите целые числа А, В, C: ";
+    cin >> A;
+    cin>>B;
+    cin>> C;
+   if (A<B && B<C) {
+    cout << "Всказывание истинно"<< endl; }
+    else cout <<"Высказывание не истинно"<< endl; 
+    
+    
+    
+   cout << "\n Зад 3" << endl;
+    int D;
+    cout << "Введите целое число D: ";
+    cin >> D;
+   if (D>=10 && D<=99 && D%2==0 ) {
+    cout << "Высказывание справедливо"<< endl; }
+    else cout <<"Высказывание не справедливо"<< endl; 
+    
+    
+    cout << "\n Зад 4" << endl;
+    int a;
+    cout << "Введите целое число А: ";
+    cin >> a;
+    if ((a/100) > (a % 100 / 10) && (a % 100 / 10) > (a % 10) || (a / 100) < (a % 100 / 10) && (a % 100 / 10) < (a % 10)) {
+		cout << "Высказывание истинно";
+	}
+	else {
+		cout << "Высказывание ложно";	
+	} 
+
+    cout << "\n Зад 5" << endl;
+    int b;
+    cout << "Введите целое число B: ";
+    cin >> b;
+   if (b/1000== b%10 && b/100%10 == b%100/10 ) {
+    cout << "Высказывание справедливо"<< endl; }
+    else cout <<"Высказывание не справедливо"<< endl;
+    
+    
+    cout << "\n Зад 6" << endl;
+    int c;
+    cout << "Введите целые числа a, b, c: ";
+    cin>>a;
+    cin >> b;
+    cin>>c;
+   if (c*c==a*a+b*b || a*a== c*c+b*b || b*b== a*a+c*c ) {
+    cout << "Треугольник прямоугольный"<< endl; }
+    else cout <<"Треугольник не прямоугольный"<< endl; 
+    
+    
+    cout << "\n Зад 7" << endl;
+    cout << "Введите целые числа a, b, c: ";
+    cin>>a;
+    cin >> b;
+    cin>>c;
+   if ((a+b)>c && (b+c)>a && (a+c)>b ) {
+    cout << "Треугольник существует"<< endl; }
+    else cout <<"Треугольник не существует"<< endl;
+    
+    return 0;
+}
