@@ -1,0 +1,105 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    cout << "\n Зад 1" << endl;
+    int A, B;
+    cout << "Введите целые числа А и В: ";
+    cin >> A;
+    cin>>B;
+   if (A>B) {
+    B=A ;}
+    if (A<B) {
+        A=B; }
+        if (A=B) {
+            A=0;
+            B=0; 
+        }
+    cout << "A = "<< A <<" B = " << B << endl; 
+    
+    
+    cout << "\n Зад 2" << endl;
+ int a, b, c;
+ cout << "1 числo:";
+ cin >> a;
+ cout << "2 числo:";
+ cin >> b;
+ cout << "3 числo:";
+ cin >> c;
+ if (b<=c && b<=a) {
+ cout << a+c;
+ }
+ if (a <= c && a <= b) {
+ cout << b + c;
+ }
+ else {
+ cout << b + a;
+ } 
+
+ 
+    
+    
+    
+  cout << "\n Зад 3" << endl;
+    int C, AB, AC;
+    cout << "Введите целые координаты: ";
+    cin >> A;
+    cin >> B;
+    cin >> C;
+   AB= B-A;
+   AC= C-A;
+   if (AB >AC) {
+       cout << "Расстояние от точки С до А = "<< AC<< endl; }
+cout << "Расстояние от точки B до А = "<< AB<< endl; 
+    
+    
+    cout << "\n Зад 4" << endl;
+    float x, y;
+    cout << "ВВедите ненулевые координаты х и у ";
+   cin >> x;
+   cin >> y ;
+   if ((x>0) & (y>0)) {
+       cout << "Четверть I";}
+   if ((x<0) & (y>0)) {
+   cout << "Четверть II"; }
+   if ((x<0) & (y<0))  {
+   cout << "Четверть III";}
+   if ((x<0) & (y<0))
+  {
+      cout << "Четверть IV";} 
+
+    cout << "\n Зад 5" << endl;
+   int s;
+   cin >> s;
+   if (s==0) {
+       cout<< "Нулевое " ;}
+       if (s>0) {
+           cout<< "Положительное " ; }
+       else cout<< "Отрицательное ";
+       if ((s%2)== 0) {
+           cout<<"чётное ";}
+       else cout <<"нечётное ";
+   
+   cout <<"число."<< endl; 
+    
+    
+    cout << "\n Зад 6" << endl;
+    int k;
+    cout << "введите К в диапозоне: 1-999" << endl;
+    cin >> k;
+    if (k % 2 == 0) {
+    cout << "четное "; }
+    else cout << "нечетное ";
+    if (k / 100 > 0 && k / 100 < 10) {
+    cout << "трехзначное "; }
+    if (k / 10 > 0 && k / 10 < 10) {
+        cout << "двухзначное "; }
+    if (k / 10 == 0) {
+        cout << "однозначное "; }
+    cout << "число.";
+
+    return 0;
+}
