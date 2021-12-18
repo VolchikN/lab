@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <math.h>
 
 using namespace std;
 
@@ -40,20 +42,34 @@ int main()
  } 
 
  
-    
-    
-    
-  cout << "\n Зад 3" << endl;
-    int C, AB, AC;
-    cout << "Введите целые координаты: ";
-    cin >> A;
-    cin >> B;
-    cin >> C;
-   AB= B-A;
-   AC= C-A;
-   if (AB >AC) {
-       cout << "Расстояние от точки С до А = "<< AC<< endl; }
-cout << "Расстояние от точки B до А = "<< AB<< endl; 
+    cout << "\n Зад 3" << endl;
+    int x1, x2, x3, y1, y2, y3;
+	double rastb, rastc;
+	cout << "введите координаты точек A,B,C\n";
+	 cin >> x1;
+     cin >> y1;
+	 cin >> x2;
+	 cin >> y2;
+	 cin >> x3;
+	 cin >> y3;
+    rastb = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+	rastc = sqrt(pow(x3 - x1, 2) + pow(y3 - y1, 2));
+
+	cout <<"Расстояние от a до b " << rastb << endl;
+	cout<< "Расстояние от a до c " << rastc << endl;
+	if (rastb > rastc)
+	{
+		cout << "Расстояние от а до c меньше чем от а до b и равно " << rastc<< endl;
+	}
+	else if(rastc > rastb)
+	{
+		cout << "Расстояние от а до b меньше чем от а до с и равно "<< rastb<< endl;
+	}
+	else
+	{
+		cout << "Расстояния равны";
+	}
+	cout << "\n"; 
     
     
     cout << "\n Зад 4" << endl;
@@ -63,27 +79,43 @@ cout << "Расстояние от точки B до А = "<< AB<< endl;
    cin >> y ;
    if ((x>0) & (y>0)) {
        cout << "Четверть I";}
-   if ((x<0) & (y>0)) {
+  else if ((x<0) & (y>0)) {
    cout << "Четверть II"; }
-   if ((x<0) & (y<0))  {
+   else if ((x<0) & (y<0))  {
    cout << "Четверть III";}
-   if ((x<0) & (y<0))
-  {
-      cout << "Четверть IV";} 
+    else if ((x>0) & (y<0))
+  { cout << "Четверть IV";} 
 
     cout << "\n Зад 5" << endl;
    int s;
+   cout << "введите целое число s" << endl;
    cin >> s;
-   if (s==0) {
-       cout<< "Нулевое " ;}
-       if (s>0) {
-           cout<< "Положительное " ; }
-       else cout<< "Отрицательное ";
-       if ((s%2)== 0) {
-           cout<<"чётное ";}
-       else cout <<"нечётное ";
-   
-   cout <<"число."<< endl; 
+   if (s > 0)
+	{
+		if (s % 2 == 0)
+		{
+			cout << "число положительное четное ";
+		}
+		else
+		{
+			cout << "число положительное нечётное";
+		}
+	}
+	else if (s < 0)
+	{
+		if (s % 2 == 0)
+		{
+			cout << "число отрицательное четное ";
+		}
+		else
+		{
+			cout << "число отрицательное нечётное";
+		}
+	}
+	else
+	{
+		cout << "число нулевое";
+	}
     
     
     cout << "\n Зад 6" << endl;
