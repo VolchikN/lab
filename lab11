@@ -12,9 +12,9 @@ int main()
     cin>>B;
    if (A>B) {
     B=A ;}
-    if (A<B) {
+   else if (A<B) {
         A=B; }
-        if (A=B) {
+       else if (A=B) {
             A=0;
             B=0; 
         }
