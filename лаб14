@@ -1,0 +1,101 @@
+#include <conio.h>
+#include <iostream>
+#include <string>
+#include <math.h>
+
+
+using namespace std;
+int main()
+{ 
+    setlocale(LC_ALL, "ru");
+    
+    cout << "\n Зад 1" << endl;
+    int A = 0, B = 0;
+    cout << "Введите число A: ";
+    cin >> A;
+    cout << "Введите число B, большее числа А: ";
+    cin >> B;
+while(A > B || A < 0 || B <0);
+    for(int i = A; i < B+1; i++){
+            for(int j = 0; j < i; j++){
+            cout << i;
+            }
+            cout << "|";
+    }
+    
+    
+    cout << "\n Зад 2" << endl;
+ int a, b, c=0;
+ cout << "Введите числа А и Б, А > Б" << endl;
+    cout << "A = ";cin >> a; 
+    cout << "B = ";cin >> b;
+    while (a >= b)
+    {
+        a -= b;
+    }
+    cout << "незанятая часть А = " << a << endl; 
+
+ 
+    cout << "\n Зад 3" << endl;
+   int N;
+  int K= 0;
+  int S= 0;
+  cout << "Введите целое число N (>1): ";
+  cin >> N;
+  while(S <= N) {
+   ++K;
+   S += K;   
+  }
+  cout << "K = " << K << endl;
+  cout<< "S = " << S<< endl; 
+    
+    
+    cout << "\n Зад 4" << endl;
+     float p;
+    cout << "Введите число процентов P от 0 до 25:";
+    cin >> p;
+    int k = 0;
+    float s = 1000;
+    while (s <= 1100) {
+        ++k;
+        s += s * p / 100;
+    }
+    cout<<"K ="<<k<<endl;
+    cout<<"S = "<< s<< endl; 
+    
+
+    cout << "\n Зад 5" << endl;
+    int o, m;
+   cout << "Введите два целых положительных числа" << endl;
+    cout << "O = ";cin >> o;
+    cout << "M = ";cin >> m;
+     while (max(o,m) % min(o,m) != 0)
+    {
+        if (o > m)
+        {
+            o = o % m;
+        }
+        else
+        {
+            m = m % o;
+        }
+              
+    }
+    cout << "NOD = " << min(o, m) << endl; 
+    
+    
+    cout << "\n Зад 6" << endl;
+    int n;
+    cout << "Введите число Фибоначчи N: ";
+    cin >> n;
+    int f1 = 1, f2 = 1, f = 0, k1 = 2;
+    while (f < n) {
+        ++k;
+        f = f2 + f1;
+        f2 = f1;
+        f1 = f;
+    }
+    cout << "Номер числа в ряду = " << k1;
+
+    return 0;
+}
