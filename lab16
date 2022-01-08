@@ -1,0 +1,122 @@
+
+#include <iostream>
+#include <ctime>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    srand(time(NULL));
+    setlocale(LC_ALL, "ru");
+    int n, N, ghost, a = 1, d = 0, b = 0, step = 0;
+    int arr[100];
+   
+   cout << "\n Зад 1" << endl; 
+    cout << "Введите число N " << endl;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+
+        arr[i] = a;
+        cout << arr[i] << ", ";
+        a += 2;
+    }
+   
+   
+   cout << "\n Зад 2" << endl;
+    cout << "Введите число N (N>1)" << endl;
+    cin >> n;
+    cout << "Введите число A " << endl;
+    cin >> a;
+    cout << "Введите число D " << endl;
+    cin >> d;
+
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = a * pow(d, step);
+        cout << arr[i] << ", ";
+        step++;
+
+    } 
+   
+
+cout << "\n Зад 3" << endl;
+    cout << "Введите число N (N>2) " << endl;
+    cin >> n;
+    cout << "Введите число A " << endl;
+    cin >> a;
+    cout << "Введите число B " << endl;
+    cin >> b;
+    arr[0] = a;
+    arr[1] = b;
+    cout << arr[0] << ", " << arr[1] << ", ";
+    step = a + b;
+    for (int i = 2; i < n; i++)
+    {
+        arr[i] = step;
+        cout << arr[i] << ", ";
+        step *= 2;
+    }
+    
+    
+    
+    cout << "\n Зад 4" << endl;
+    cout << "Введите число N " << endl;
+    cin >> n;
+    N = n - 1;
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = i + 1;
+        cout << arr[i] << ", ";
+    }
+    
+    cout << "\n\n";
+    for (int i = 0; i < n/2; i++)
+    {
+        cout << arr[i] << ", " << arr[N] << ", ";
+        N--;
+
+    }
+    if (n % 2 == 1)
+    {
+        arr[n - 1] = n / 2 + 1;
+        cout << arr[n - 1] << endl;
+    }
+   
+    
+    
+    cout << "\n Зад 5" << endl;
+    cout << "Введите число N " << endl;
+    cin >> n;
+    N = n - 1;
+    for (int i = 0; i < n;i++)
+    {
+        arr[i] = i+1;
+        cout << arr[i] << ", ";
+    }
+    cout << "\n\n";
+    for (int i = 1; i < n; i += 2)
+    {
+        cout << arr[i] << ", ";
+    }
+    if (n % 2 == 0)
+    {
+        
+        for (int i = N; N >= 0; N -= 2)
+        {
+            cout << arr[N - 1] << ", ";
+        }
+    }
+    else
+    {
+        for (int i = N; N >= 0; N -= 2)
+        {
+            cout << arr[N] << ", ";
+        }
+    }
+    
+    
+    
+    return 0;
+}
