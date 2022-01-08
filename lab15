@@ -1,0 +1,183 @@
+#include <iostream>
+#include <stdbool.h>
+#include <ctime>
+#include <string>
+#include <math.h>
+
+using namespace std;
+
+double powerA3(double a, double b)
+{
+	b = pow(a, 3);
+	return b;
+}
+
+
+
+int Sign(int x)
+{
+	if (x < 0)
+	{
+		return -1;
+	}
+	else if (x == 0)
+	{
+		return 0;
+	}
+	else
+	{
+		return 1;
+	}
+}
+
+
+
+double ringS(double r1,double r2)
+{
+	const double pi = 3.14;
+	cout << "Площадь внутреннего кольца = ";
+	return (pi * pow(r2, 2)) - (pi * pow(r1, 2));
+}
+
+
+
+int Quarter(int x, int y)
+{
+	int result;
+	if (x > 0)
+	{
+		if (y > 0)
+		{
+			result = 1;
+		}
+		else
+		{
+			result = 4;
+		}
+	}
+	else
+	{
+		if (y > 0)
+		{
+			result = 2;
+		}
+		else
+		{
+			result = 3;
+		}
+	}
+	return result;
+}
+
+
+
+double fact2(int n)
+{
+	int summ = 1;
+	if (n % 2 == 0)
+	{
+		for (int i = 2; i <= n; i += 2)
+		{
+			summ *= i;
+		}
+		return summ;
+	}
+	else
+	{
+		for (int i = 1; i <= n; i += 2)
+		{
+			summ *= i;
+		}
+		return summ;
+	}
+}
+
+
+int main()
+{
+	srand(time(NULL));
+	setlocale(LC_ALL, "ru");
+	int A,B, x, y;
+	double a,b = 0;
+	int r1, r2;
+	const double pi = 3.14;
+
+  cout << "\n Зад 1" << endl;
+	cout << "Введите 5 чисел для нахождения их 3 степени" << endl;
+	cout << "A = ";
+	cin >> a; 
+	powerA3(a, b);
+	cout << a << "^3 = " << powerA3(a, b) << endl;
+	cout << "A = ";
+	cin >> a;powerA3(a, b);
+	cout << a << "^3 = " << powerA3(a, b) << endl;
+	cout << "A = ";
+	cin >> a;
+	powerA3(a, b);
+	cout << a << "^3 = " << powerA3(a, b) << endl;
+	cout << "A = ";
+	cin >> a;
+	powerA3(a, b);
+	cout << a << "^3 = " << powerA3(a, b) << endl;
+	cout << "A = ";
+	cin >> a;powerA3(a, b);
+	cout << a << "^3 = " << powerA3(a, b) << endl; 
+	
+	
+  cout << "\n Зад 2" << endl;
+	cout << "Введите 2 числa" << endl;
+	cout << "A = ";
+	cin >> A;
+	cout << "B = ";
+	cin >> B;
+	cout <<"Сумма равна "<< Sign(A) + Sign(B)<< endl;
+
+	
+	
+	cout << "\n Зад 3" << endl;
+	cout << "Введите радиус большей и меньшей окружностей" << endl;
+	cout << "R внутр = ";cin >> r1;
+	cout << "R внешн = ";cin >> r2;
+	cout << ringS(r1, r2) << endl;
+	cout << "\n";
+	cout << "Введите радиус большей и меньше окружностей" << endl;
+	cout << "R внутр = ";cin >> r1;
+	cout << "R внешн = ";cin >> r2;
+	cout << ringS(r1, r2) << endl;
+	cout << "\n";
+	cout << "Введите радиус большей и меньшей окружностей" << endl;
+	cout << "R внутр = ";cin >> r1;
+	cout << "R внешн = ";cin >> r2;
+	cout << ringS(r1, r2) << endl;
+	
+	
+  cout << "\n Зад 4" << endl;
+	cout << "Введите ненулевые координаты точки" << endl;
+	cout << "X = ";
+	cin >> x;
+	cout << "Y = ";
+	cin >> y;
+	cout << Quarter(x,y) << " четверть" << endl;
+	cout << "Введите ненулевые координаты точки" << endl;
+	cout << "X = ";
+	cin >> x;
+	cout << "Y = ";
+	cin >> y;
+	cout << Quarter(x, y) << " четверть" << endl;
+	cout << "Введите ненулевые координаты точки"<< endl;
+	cout << "X = ";
+	cin >> x;
+	cout << "Y = ";
+	cin >> y;
+	cout << Quarter(x, y) << " четверть" << endl; 
+
+	
+	
+	  cout << "\n Зад 5" << endl;
+	cout << "Введите целое число" << endl;
+	cin >> x;
+	cout << "Двойной факториал = "<< fact2(x);
+	
+	
+	return 0;
+}
