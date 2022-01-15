@@ -42,7 +42,7 @@ while(A > B || A < 0 || B <0);
   int S= 0;
   cout << "Введите целое число N (>1): ";
   cin >> N;
-  while(S <= N) {
+  while(S < N) {
    ++K;
    S += K;   
   }
@@ -81,7 +81,8 @@ while(A > B || A < 0 || B <0);
         }
               
     }
-    cout << "NOD = " << min(o, m) << endl; 
+    cout << "NOD = " << min(o, m) << endl;  
+    
     
     
     cout << "\n Зад 6" << endl;
@@ -89,13 +90,19 @@ while(A > B || A < 0 || B <0);
     cout << "Введите число Фибоначчи N: ";
     cin >> n;
     int f1 = 1, f2 = 1, f = 0, k1 = 2;
+   
     while (f < n) {
-        ++k;
+        ++k1;
         f = f2 + f1;
         f2 = f1;
         f1 = f;
-    }
-    cout << "Номер числа в ряду = " << k1;
-
+         
+        }
+        if (n==1) { 
+    cout<<"1 элемент";}
+   
+    
+        else cout << "Номер числа в ряду = " << k1;
+    
     return 0;
 }
